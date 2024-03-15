@@ -1,0 +1,129 @@
+/* Global */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+/* Colors */
+:root {
+    /* Primary colors */
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+
+    /* Neutral colors */
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+}
+
+/* Center card */
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mobile styles */
+body {
+    background-color: var(--off-white);
+    font-family: 'Poppins', sans-serif;
+}
+
+.card {
+    background-color: var(--white);
+    padding: 4rem 2rem 2rem 2rem;
+    border-radius: 2rem 2rem 5rem 2rem;
+}
+
+/* Inputs */
+.inputs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.day-input,
+.month-input,
+.year-input {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-transform: uppercase;
+    color: var(--smokey-grey);
+    letter-spacing: 2px;
+    margin-bottom: .2rem;
+}
+
+.input {
+    border: 1px solid var(--light-grey);
+    height: 3rem;
+    border-radius: .5rem;
+    font-size: 16px;
+    font-weight: 800;
+    padding-left: 10px;
+}
+
+/* Button */
+.button {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-top: 1rem;
+}
+
+.button::after {
+    content: '';
+    background-color: var(--light-grey);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 38%;
+    height: 1px;
+}
+
+.button::before {
+    content: '';
+    background-color: var(--light-grey);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 38%;
+    height: 1px;
+}
+
+#btn {
+    background-color: var(--purple);
+    border-radius: 50%;
+    border: none;
+    width: 3.7rem;
+    height: 3.7rem;
+}
+
+img {
+    height: 1.5rem;
+}
+
+/* Result */
+h2 {
+    color: var(--purple);
+}
+
+span {
+    color: var(--off-black);
+}
+
+/* Error styles */
+.error-text {
+    color: var(--light-red);
+    font-weight: 400;
+    font-style: italic;
+    font-size: 8px;
+    display: none;
+}
+
+.error-input {
+    border: 1px solid var(--light-red);
+}

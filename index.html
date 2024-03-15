@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age calculator | FrontEnd Mentor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="card">
+            <form>
+                <div class="inputs">
+
+                    <!-- Day input -->
+                    <div class="day-input">
+                        <label for="dayInput" class="error-label">day</label>
+                        <input type="number" id="dayInput"  min="1" max="31" class="input">
+                        <p class="error-text" id="error">Must be a valid date</p>
+                    </div>
+
+                    <!-- Month input -->
+                    <div class="month-input">
+                        <label for="monthInput" class="error-label">month</label>
+                        <input type="number" id="monthInput" min="1" max="12" class="input">
+                    </div>
+
+                    <!-- Year input -->
+                    <div class="year-input">
+                        <label for="yearInput" class="error-label">year</label>
+                        <input type="number" id="yearInput" min="1900" max="2023" class="input">
+                    </div>
+                </div>
+                <div class="button">
+
+                    <!-- Submit button -->
+                    <button id="btn"><img src="assets/images/icon-arrow.svg"></button>
+                </div>
+            </form>
+            <section>
+                <h2 id="yearOutput">-- <span>years</span></h2>
+                <h2 id="monthOutput">-- <span>months</span></h2>
+                <h2 id="dayOutput">-- <span>days</span></h2>
+            </section>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
