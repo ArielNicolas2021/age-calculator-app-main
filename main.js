@@ -27,7 +27,7 @@ if (monthTime === 1 || monthTime === 3 || monthTime === 5 || monthTime === 7 || 
 // Check if the inputs are correct
 function verification(e) {
     e.preventDefault()
-    if(dayIn.value === '' || monthIn.value === '' || yearIn.value === '') {
+    if(dayIn.value === '' || monthIn.value === '' || yearIn.value === '' || dayIn.value <= 0 || dayIn.value > 31 || monthIn.value <= 0 || monthIn.value > 12 || yearIn.value < 1900 || yearIn.value > yearTime) {
         dayIn.classList.add('error-input')
         monthIn.classList.add('error-input')
         yearIn.classList.add('error-input')
