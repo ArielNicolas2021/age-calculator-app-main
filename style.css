@@ -1,6 +1,13 @@
 /* Global */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
 
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Colors */
 :root {
     /* Primary colors */
@@ -109,6 +116,9 @@ img {
 /* Result */
 h2 {
     color: var(--purple);
+    font-size: 3rem;
+    font-weight: 800;
+    font-style: italic;
 }
 
 span {
@@ -126,4 +136,46 @@ span {
 
 .error-input {
     border: 1px solid var(--light-red);
+}
+
+/* Desktop styles */
+@media (min-width: 1440px) {
+    /* Inputs */
+    .input {
+        width: 10rem;
+        height: 4rem;
+        font-size: 2rem;
+    }
+
+    /* Button */
+    .button {
+        text-align: end;
+    }
+
+    .button::before {
+        content: '';
+        background-color: var(--light-grey);
+        position: absolute;
+        left: 0;
+        width: 77%;
+        height: 1px;
+    }
+
+    .button::after {
+        display: none;
+    }
+
+    #btn {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    img {
+        height: 4rem;
+    }
+
+    /* Result */
+    h2 {
+        font-size: 5rem;
+    }
 }
